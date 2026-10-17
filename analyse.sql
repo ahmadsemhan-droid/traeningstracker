@@ -13,3 +13,8 @@ join log on ovelser.id = log.ovelse_id;
 select ovelser.dag,ovelser.navn,log.kg
 from ovelser 
 join log on ovelser.id = log.ovelse_id;
+
+-- Seneste test pr. øvelse
+SELECT ovelse_id, MAX(dato)
+FROM log
+GROUP BY ovelse_id;
