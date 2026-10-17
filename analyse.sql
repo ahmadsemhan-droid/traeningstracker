@@ -18,3 +18,9 @@ join log on ovelser.id = log.ovelse_id;
 SELECT ovelse_id, MAX(dato)
 FROM log
 GROUP BY ovelse_id;
+
+-- Nuværende PR
+SELECT ovelser.navn, MAX(log.dato) AS seneste_test, log.kg
+FROM log
+JOIN ovelser ON ovelser.id = log.ovelse_id
+GROUP BY log.ovelse_id;
