@@ -29,3 +29,5 @@ CREATE TABLE IF NOT EXISTS log (
 forbindelse.commit()
 forbindelse.close()
 print("Databasen er klar")
+
+
